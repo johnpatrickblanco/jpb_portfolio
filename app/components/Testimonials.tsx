@@ -16,7 +16,7 @@ export default function Testimonials() {
             <motion.div variants={textVariant()}>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">Testimonials</h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mb-8"></div>
-                <p className="text-gray-400 max-w-3xl mb-12">
+                <p className="text-gray-500 dark:text-gray-400 max-w-3xl mb-12">
                     What people I've worked with say about me
                 </p>
             </motion.div>
@@ -26,18 +26,18 @@ export default function Testimonials() {
                     <motion.div
                         key={testimonial.name}
                         variants={fadeIn('up', 'spring', index * 0.2, 0.75)}
-                        className="bg-gray-900 p-6 rounded-xl border border-gray-800"
+                        className="bg-gray-100 dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800"
                     >
                         <div className="flex items-center gap-4 mb-4">
-                            <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center">
+                            <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
                                 <span className="text-xl">👤</span>
                             </div>
                             <div>
-                                <h4 className="font-semibold">{testimonial.name}</h4>
-                                <p className="text-sm text-gray-400">{testimonial.role}</p>
+                                <h4 className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</h4>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}</p>
                             </div>
                         </div>
-                        <p className="text-gray-300">"{testimonial.quote}"</p>
+                        <p className="text-gray-600 dark:text-gray-300">"{testimonial.quote}"</p>
                     </motion.div>
                 ))}
             </div>

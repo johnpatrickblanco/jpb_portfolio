@@ -8,7 +8,7 @@ const poppins = Poppins({
     variable: '--font-poppins',
 });
 export const metadata: Metadata = {
-    title: 'Ali Raza | Full Stack Developer',
+    title: 'John Patrick P. Blanco | Information Technology',
     description: 'A modern portfolio for a web developer',
 }
 
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className="scroll-smooth">
-        <body className={`${poppins.className} bg-gray-950 text-gray-100`}>
+        <body className={`${poppins.className} bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100`}>
         {children}
         </body>
         </html>

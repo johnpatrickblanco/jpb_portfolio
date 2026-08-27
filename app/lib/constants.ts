@@ -1,64 +1,84 @@
 import {
     FiGithub,
-    FiTwitter,
     FiLinkedin,
-    FiMail,
-    FiCode,
-    FiLayers,
+    FiFacebook,
     FiSmartphone,
-    FiDatabase,
-    FiCpu
 } from 'react-icons/fi'
-import { FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql } from 'react-icons/si'
+import {
+    SiOpenjdk,
+    SiCplusplus,
+    SiPython,
+    SiSharp,
+    SiHtml5,
+    SiJavascript,
+    SiPhp,
+    SiMysql,
+    SiXampp,
+    SiLinux,
+} from 'react-icons/si'
+import { DiVisualstudio } from 'react-icons/di'
 
 export const navLinks = [
     { name: 'Home', href: 'home' },
     { name: 'About', href: 'about' },
+    { name: 'Education', href: 'education' },
     { name: 'Projects', href: 'projects' },
-    { name: 'Services', href: 'services' },
     { name: 'Contact', href: 'contact' },
 ];
 
 export const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com/alirazahaider', icon: FiGithub },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/alirazaweb/', icon: FiLinkedin },
-    { name: 'Email', url: 'mailto:alicodespace@gmail.com', icon: FiMail },
+    { name: 'GitHub', url: 'https://github.com/johnpatrickblanco', icon: FiGithub },
+    { name: 'Phone', url: 'tel:+639065657910', icon: FiSmartphone },
+    { name: 'Facebook', url: 'https://www.facebook.com/johnpatrick.blanco.33/', icon: FiFacebook },
 ]
 
-export const skills = [
-    { name: 'React', icon: FaReact },
-    { name: 'Next.js', icon: SiNextdotjs },
-    { name: 'TypeScript', icon: SiTypescript },
-    { name: 'Node.js', icon: FaNodeJs },
-    { name: 'Tailwind CSS', icon: SiTailwindcss },
-    { name: 'GraphQL', icon: SiGraphql },
+export const skillCategories = [
+    {
+        category: 'Programming',
+        skills: [
+            { name: 'Java', icon: SiOpenjdk },
+            { name: 'C++', icon: SiCplusplus },
+            { name: 'Python', icon: SiPython },
+            { name: 'C#', icon: SiSharp },
+        ],
+    },
+    {
+        category: 'Web Development',
+        skills: [
+            { name: 'HTML', icon: SiHtml5 },
+            { name: 'JavaScript', icon: SiJavascript },
+            { name: 'PHP', icon: SiPhp },
+        ],
+    },
+    {
+        category: 'Databases & Tools',
+        skills: [
+            { name: 'MySQL', icon: SiMysql },
+            { name: 'XAMPP', icon: SiXampp },
+            { name: 'Visual Studio', icon: DiVisualstudio },
+            { name: 'Linux', icon: SiLinux },
+        ],
+    },
 ]
 
 export const projects = [
     {
-        name: 'Stock Portfolio Calculator', 
-        image: '/images/stock-portfolio-calculator-by-ali_raza.png',
-        description: 'Easily track your investment performance by calculating profit, loss, and net returns.',
-        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-        githubUrl: 'https://github.com/Alirazahaider/stock-portfolio-calculator',
-        liveUrl: 'https://stockfolio-calculator.vercel.app/'
+        name: 'Casa Nostra Resort and Event Information System with Reservation System', 
+        image: '/images/screenshot.png',
+        description: 'A resort and event information system with an online reservation feature designed to make the booking process easier, faster, and more organized. The system allows guests to view resort information, check room availability, submit reservations, and view booking details.',
+        technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+        status: 'Ongoing / Academic Thesis Project',
+        githubUrl: '',
+        liveUrl: ''
     },
     {
-        name: 'Personal Budget Calculator',
-        image: '/images/personal-budget-calculator-by-ali_raza.png',
-        description: 'Track income and expenses to manage your finances effortlessly.',
-        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'recharts', 'jsPDF', 'Vercel'],
-        githubUrl: 'https://github.com/Alirazahaider/personal-budget-calculator',
-        liveUrl: 'https://personal-budget-calculator.vercel.app/'
-    },
-    {
-        name: 'Loan Repayment Tracker',
-        image: '/images/loan-repayment-tracker-by-ali_raza.png',
-        description: 'Plan your payments with a clear breakdown of principal, interest, and balance. Export to PDF with one click.',
-        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'react-to-pdf', 'Vercel'],
-        githubUrl: 'https://github.com/Alirazahaider/loan-repayment-calculator',
-        liveUrl: 'https://loan-repayment-tracker.vercel.app/'
+        name: 'Bayugo Dental Clinic Online Record Management System',
+        image: '/images/screenshot.png',
+        description: 'An online dental clinic management system designed to help organize patient information, appointments, and dental clinic records. The system aims to reduce manual work and make patient information easier for authorized clinic personnel to manage and access.',
+        technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Laravel'],
+        status: 'Academic Project / Ongoing',
+        githubUrl: '',
+        liveUrl: ''
     }
 ]
 
@@ -66,44 +86,16 @@ export const testimonials = [
     {
         name: 'Jane Smith',
         role: 'CEO at TechCorp',
-        quote: 'Ali delivered our project ahead of schedule with exceptional quality. Highly recommended!'
+        quote: 'JP delivered our project ahead of schedule with exceptional quality. Highly recommended!'
     },
     {
         name: 'Mike Johnson',
         role: 'Product Manager',
-        quote: 'Working with Ali was a pleasure. His attention to detail and problem-solving skills are top-notch.'
+        quote: 'Working with JP was a pleasure. His attention to detail and problem-solving skills are top-notch.'
     },
     {
         name: 'Sarah Williams',
         role: 'Marketing Director',
-        quote: 'Our website performance improved dramatically after Ali optimized it. Great work!'
-    }
-]
-
-export const services = [
-    {
-        title: 'Web Development',
-        description: 'Custom websites and web applications built with modern technologies for optimal performance.',
-        icon: FiCode
-    },
-    {
-        title: 'UI/UX Design',
-        description: 'Beautiful, intuitive interfaces that enhance user experience and drive engagement.',
-        icon: FiLayers
-    },
-    {
-        title: 'Mobile Development',
-        description: 'Cross-platform mobile apps that work seamlessly on iOS and Android devices.',
-        icon: FiSmartphone
-    },
-    {
-        title: 'Backend Development',
-        description: 'Robust server-side solutions with scalable architecture and secure APIs.',
-        icon: FiDatabase
-    },
-    {
-        title: 'DevOps',
-        description: 'CI/CD pipelines, cloud infrastructure, and deployment automation for your projects.',
-        icon: FiCpu
+        quote: 'Our website performance improved dramatically after JP optimized it. Great work!'
     }
 ]

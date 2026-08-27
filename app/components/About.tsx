@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { fadeIn, textVariant } from '@/app/lib/animations'
-import { skills } from '@/app/lib/constants'
+import { skillCategories } from '@/app/lib/constants'
 
 export default function About() {
     return (
@@ -23,16 +23,23 @@ export default function About() {
                     variants={fadeIn('right', 'spring', 0.1, 1)}
                     className="md:w-1/2"
                 >
-                    <p className="text-gray-400 mb-6">
-                        I'm a passionate web developer with 5+ years of experience creating modern web applications.
-                        I specialize in JavaScript frameworks like React and Next.js, and I love building intuitive user interfaces.
+                    <p className="text-gray-600 dark:text-gray-400 mb-6">
+                        I'm John Patrick P. Blanco, also known as JP, a BS Information Technology student at
+                        Data Center College of the Philippines – Bangued. I'm a curious and motivated student
+                        who enjoys trying new things, exploring technology, and continuously learning new skills.
                     </p>
-                    <p className="text-gray-400 mb-6">
-                        My journey in web development started when I was in college, and I've been hooked ever since.
-                        I enjoy solving complex problems and turning ideas into reality through code.
+                    <p className="text-gray-600 dark:text-gray-400 mb-6">
+                        I'm interested in coding, graphic design, and creating digital solutions that can be useful
+                        in real-life situations. I believe learning is a continuous process — I enjoy experimenting
+                        with new ideas and challenging myself to step outside my comfort zone.
                     </p>
-                    <p className="text-gray-400">
-                        When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new technologies.
+                    <p className="text-gray-600 dark:text-gray-400 mb-6">
+                        When I'm not studying, I enjoy playing chess, which helps me develop patience, strategy,
+                        critical thinking, and problem-solving skills.
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400">
+                        My goal is to build a successful career in technology, continuously improve my skills,
+                        create meaningful solutions, and achieve financial independence.
                     </p>
                 </motion.div>
 
@@ -40,15 +47,27 @@ export default function About() {
                     variants={fadeIn('left', 'spring', 0.1, 1)}
                     className="md:w-1/2"
                 >
-                    <h3 className="text-xl font-semibold mb-6">My Skills</h3>
-                    <div className="flex flex-wrap gap-4">
-                        {skills.map((skill) => (
-                            <div
-                                key={skill.name}
-                                className="px-4 py-2 bg-gray-900 rounded-full flex items-center gap-2"
-                            >
-                                <skill.icon className="w-5 h-5 text-blue-400" />
-                                <span>{skill.name}</span>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Technical Skills</h3>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">
+                        Technologies I am currently learning and developing.
+                    </p>
+                    <div className="flex flex-col gap-6">
+                        {skillCategories.map((group) => (
+                            <div key={group.category}>
+                                <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">
+                                    {group.category}
+                                </h4>
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                    {group.skills.map((skill) => (
+                                        <div
+                                            key={skill.name}
+                                            className="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+                                        >
+                                            <skill.icon className="w-5 h-5 text-blue-400 shrink-0" />
+                                            <span className="text-sm">{skill.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         ))}
                     </div>

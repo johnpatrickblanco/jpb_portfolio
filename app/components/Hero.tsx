@@ -27,13 +27,13 @@ export default function Hero() {
                     className="md:w-1/2"
                 >
                     <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                        Hi, I'm <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Ali</span>
+                        Hi, I'm <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">JP</span>
                     </h1>
-                    <h2 className="text-2xl md:text-4xl font-semibold mb-6 text-gray-300">
-                        Full Stack Web Developer
+                    <h2 className="text-2xl md:text-4xl font-semibold mb-6 text-gray-600 dark:text-gray-300">
+                        Bachelor of Science in Information Technology
                     </h2>
-                    <p className="text-lg text-gray-400 mb-8">
-                        I build modern, responsive, and user-friendly web applications with the latest technologies.
+                    <p className="text-lg text-gray-500 dark:text-gray-400 mb-8">
+                        I'm always eager to learn new technologies and explore exciting opportunities that help me grow and expand my skills.
                     </p>
                     <div className="flex gap-4">
                         <Link
@@ -52,7 +52,7 @@ export default function Hero() {
                                 e.preventDefault();
                                 handleScroll('contact');
                             }}
-                            className="px-6 py-3 rounded-full border border-gray-700 text-white hover:bg-gray-800 transition-colors"
+                            className="px-6 py-3 rounded-full border border-gray-700 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                         >
                             Contact Me
                         </Link>
@@ -65,8 +65,8 @@ export default function Hero() {
                 >
                     <div className='relative mx-auto md:ml-auto'>
                         <Image
-                            src="/AliRaza.png"
-                            alt="ali-avatar"
+                            src="/images/pogi.jpg"
+                            alt="avatar"
                             className="rounded-full w-4/5 xl:w-[90%] mx-auto md:ml-auto h-full object-contain"
                             width={350}
                             height={350}
@@ -89,7 +89,7 @@ export default function Hero() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-white transition-colors"
+                        className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                         aria-label={link.name}
                     >
                         <link.icon className="w-6 h-6" />
