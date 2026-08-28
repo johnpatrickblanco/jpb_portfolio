@@ -2,6 +2,7 @@
 
 A modern, responsive personal portfolio website built for **John Patrick P. Blanco**, a BS Information Technology student and aspiring full-stack web developer. The site showcases skills, education, projects, and a clear way for visitors to get in touch.
 
+![Web Dev Portfolio Screenshot](./public/images/web.png)
 
 ---
 
