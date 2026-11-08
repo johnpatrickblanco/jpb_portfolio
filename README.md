@@ -2,13 +2,11 @@
 
 A modern, responsive personal portfolio website built for **John Patrick P. Blanco**, a BS Information Technology student and aspiring full-stack web developer. The site showcases skills, education, projects, and a clear way for visitors to get in touch.
 
-![Web Dev Portfolio Screenshot](./public/images/screenshot.png)
-
 ---
 
 ## ✨ Features
 
-- ⚡ **Fast & SEO-friendly** – Next.js static generation for optimal performance
+- ⚡ **Fast & SEO-friendly** – Vite static build for optimal performance
 - 🎨 **Smooth animations** – Page transitions and hover effects powered by Framer Motion
 - 📱 **Fully responsive** – Seamless experience on mobile, tablet, and desktop
 - 🧭 **Single-page navigation** – Smooth-scroll sections for Home, About, Education, Projects, and Contact
@@ -21,7 +19,8 @@ A modern, responsive personal portfolio website built for **John Patrick P. Blan
 
 | Layer       | Technology                                                                 |
 |-------------|----------------------------------------------------------------------------|
-| Framework   | [Next.js](https://nextjs.org/)                                             |
+| Build Tool  | [Vite](https://vite.dev/)                                                  |
+| Framework   | [React](https://react.dev/)                                                |
 | Language    | [TypeScript](https://www.typescriptlang.org/)                              |
 | Styling     | [Tailwind CSS](https://tailwindcss.com/)                                   |
 | Animations  | [Framer Motion](https://www.framer.com/motion/)                            |
@@ -33,13 +32,16 @@ A modern, responsive personal portfolio website built for **John Patrick P. Blan
 ## 📂 Project Structure
 
 ```
-app/
+src/
 ├── components/          # UI sections (Hero, About, Projects, CTA, Footer, etc.)
 ├── lib/                 # Constants, skill data, and animation variants
 ├── utils/               # Helper utilities (smooth scroll)
-├── globals.css          # Global styles
-├── layout.tsx           # Root layout
-└── page.tsx             # Single-page entry point
+├── App.tsx              # Single-page layout
+├── main.tsx             # React entry point
+└── index.css            # Global styles
+index.html               # Vite HTML entry
+vite.config.js           # Vite configuration (builds to dist/)
+vercel.json              # Vercel deployment configuration
 ```
 
 ---
@@ -77,23 +79,25 @@ Start the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### Production Build
 
 ```bash
 npm run build
-npm run start
+npm run preview
 ```
+
+The static output is generated in `dist/`.
 
 ---
 
 ## 🛠️ Customization
 
-- **Personal info, skills & social links** – edit `app/lib/constants.ts`
-- **Animations** – tweak variants in `app/lib/animations.ts`
-- **Sections** – modify individual components in `app/components/`
-- **Theme & styling** – adjust classes in `tailwind.config.ts` and `app/globals.css`
+- **Personal info, skills & social links** – edit `src/lib/constants.ts`
+- **Animations** – tweak variants in `src/lib/animations.ts`
+- **Sections** – modify individual components in `src/components/`
+- **Theme & styling** – adjust classes in `tailwind.config.ts` and `src/index.css`
 
 ---
 
