@@ -1,4 +1,4 @@
-import './bootstrap';
+import './app.css';
 
 const initScrollReveal = () => {
     const elements = document.querySelectorAll('.reveal');
@@ -136,10 +136,18 @@ const initCarousels = () => {
     });
 };
 
+const initYear = () => {
+    const year = document.getElementById('year');
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initSmoothScroll();
     initThemeToggle();
     initMobileMenu();
     initCarousels();
+    initYear();
 });

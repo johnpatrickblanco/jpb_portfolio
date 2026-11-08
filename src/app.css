@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
-@source '../views/**/*.blade.php';
-@source '../js/**/*.js';
+@source '../index.html';
+@source './**/*.js';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -34,7 +34,7 @@ body {
     --background-rgb: 10, 10, 10;
 }
 
-/* Scroll-reveal animations (replaces framer-motion) */
+/* Scroll-reveal animations */
 .reveal {
     opacity: 0;
     transform: translateY(40px);

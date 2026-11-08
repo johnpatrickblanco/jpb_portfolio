@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A modern portfolio for a web developer">
+    <title>John Patrick P. Blanco | Information Technology</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+    <script type="module" src="/src/main.js"></script>
+</head>
+<body class="font-sans bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased">
+    <!-- SVG icon sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+        <defs>
+            <symbol id="icon-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </symbol>
+            <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </symbol>
+            <symbol id="icon-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </symbol>
+            <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </symbol>
+            <symbol id="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </symbol>
+            <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </symbol>
+            <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </symbol>
+            <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+            </symbol>
+            <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"/>
+            </symbol>
+            <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+            </symbol>
+        </defs>
+    </svg>
+
+    <main>
+        <header class="reveal is-visible sticky top-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md">
+            <nav class="max-w-7xl mx-auto flex justify-between items-center py-6 px-4 sm:px-6 lg:px-8">
+                <button type="button" data-scroll="home" class="flex items-center gap-3 group">
+                    <span class="flex items-center justify-center w-11 h-11 rounded-2xl bg-gradient-to-br from-purple-600 to-blue-500 text-white text-base font-black shadow-lg shadow-purple-600/30 group-hover:scale-105 transition-transform">
+                        JP
+                    </span>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+                        John Patrick P. Blanco
+                    </span>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex space-x-8">
+                    <li>
+                        <button type="button" data-scroll="home" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">Home</button>
+                    </li>
+                    <li>
+                        <button type="button" data-scroll="about" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">About</button>
+                    </li>
+                    <li>
+                        <button type="button" data-scroll="education" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">Education</button>
+                    </li>
+                    <li>
+                        <button type="button" data-scroll="projects" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">Projects</button>
+                    </li>
+                    <li>
+                        <button type="button" data-scroll="contact" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">Contact</button>
+                    </li>
+                </ul>
+
+                <div class="flex items-center gap-4">
+                    <!-- Theme toggle -->
+                    <button id="themeToggle" type="button" aria-label="Toggle theme" class="p-2 rounded-full text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800 transition-colors">
+                        <span id="iconSun" class="hidden"><svg class="w-6 h-6" aria-hidden="true"><use href="#icon-sun"></use></svg></span>
+                        <span id="iconMoon"><svg class="w-6 h-6" aria-hidden="true"><use href="#icon-moon"></use></svg></span>
+                    </button>
+
+                    <!-- Mobile menu button -->
+                    <button id="menuToggle" type="button" aria-label="Toggle menu" class="md:hidden text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none">
+                        <span id="menuIcon"><svg class="w-6 h-6" aria-hidden="true"><use href="#icon-menu"></use></svg></span>
+                        <span id="closeIcon" class="hidden"><svg class="w-6 h-6" aria-hidden="true"><use href="#icon-x"></use></svg></span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="mobile-menu fixed top-16 left-0 right-0 bg-white dark:bg-gray-900 z-50 shadow-2xl md:hidden border-b border-gray-200 dark:border-gray-800">
+                    <div class="flex flex-col p-6">
+                        <ul class="flex flex-col space-y-6">
+                            <li>
+                                <button type="button" data-scroll="home" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-lg transition-colors">Home</button>
+                            </li>
+                            <li>
+                                <button type="button" data-scroll="about" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-lg transition-colors">About</button>
+                            </li>
+                            <li>
+                                <button type="button" data-scroll="education" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-lg transition-colors">Education</button>
+                            </li>
+                            <li>
+                                <button type="button" data-scroll="projects" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-lg transition-colors">Projects</button>
+                            </li>
+                            <li>
+                                <button type="button" data-scroll="contact" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-lg transition-colors">Contact</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Hero -->
+            <section class="flex flex-col justify-center pt-10 md:pt-20 pb-32" id="home">
+                <div class="flex flex-col md:flex-row items-center gap-8 overflow-hidden justify-between">
+                    <div class="md:w-1/2">
+                        <div class="reveal" data-direction="left" style="--reveal-delay: 0.2s">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+                                Hi, I'm <span class="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">JP</span>
+                            </h1>
+                            <h2 class="text-2xl md:text-4xl font-semibold mb-6 text-gray-600 dark:text-gray-300">
+                                Bachelor of Science in Information Technology
+                            </h2>
+                            <p class="text-lg text-gray-500 dark:text-gray-400 mb-8">
+                                I'm always eager to learn new technologies and explore exciting opportunities that help me grow and expand my skills.
+                            </p>
+                            <div class="flex gap-4">
+                                <button type="button" data-scroll="projects" class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white hover:opacity-90 transition-opacity">
+                                    View My Work
+                                </button>
+                                <button type="button" data-scroll="contact" class="px-6 py-3 rounded-full border border-gray-700 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                                    Contact Me
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="justify-end flex">
+                        <div class="reveal relative mx-auto md:ml-auto" data-direction="right" style="--reveal-delay: 0.2s">
+                            <img
+                                src="/images/pogi.jpg"
+                                alt="avatar"
+                                class="rounded-full w-4/5 xl:w-[90%] mx-auto md:ml-auto h-full object-contain"
+                                width="350"
+                                height="350"
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal mt-16 flex justify-center gap-6" data-direction="up" style="--reveal-delay: 0.5s">
+                    <a href="https://github.com/johnpatrickblanco" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="GitHub">
+                        <svg class="w-6 h-6" aria-hidden="true"><use href="#icon-github"></use></svg>
+                    </a>
+                    <a href="tel:+639065657910" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="Phone">
+                        <svg class="w-6 h-6" aria-hidden="true"><use href="#icon-phone"></use></svg>
+                    </a>
+                    <a href="https://www.facebook.com/johnpatrick.blanco.33/" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="Facebook">
+                        <svg class="w-6 h-6" aria-hidden="true"><use href="#icon-facebook"></use></svg>
+                    </a>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section class="pb-20 pt-5" id="about">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">About Me</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mb-8"></div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="reveal md:w-1/2" data-direction="left" style="--reveal-delay: 0.1s">
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            I'm John Patrick P. Blanco, also known as JP, a BS Information Technology student at
+                            Data Center College of the Philippines – Bangued. I'm a curious and motivated student
+                            who enjoys trying new things, exploring technology, and continuously learning new skills.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            I'm interested in coding, graphic design, and creating digital solutions that can be useful
+                            in real-life situations. I believe learning is a continuous process — I enjoy experimenting
+                            with new ideas and challenging myself to step outside my comfort zone.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            When I'm not studying, I enjoy playing chess, which helps me develop patience, strategy,
+                            critical thinking, and problem-solving skills.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            My goal is to build a successful career in technology, continuously improve my skills,
+                            create meaningful solutions, and achieve financial independence.
+                        </p>
+                    </div>
+
+                    <div class="reveal md:w-1/2" data-direction="right" style="--reveal-delay: 0.1s">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Technical Skills</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+                            Technologies I am currently learning and developing.
+                        </p>
+                        <div class="flex flex-col gap-6">
+                            <div>
+                                <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">
+                                    Programming
+                                </h4>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                    <div class="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="w-5 h-5 shrink-0 flex items-center justify-center text-[11px] font-bold leading-none rounded" style="color: #EA2D2F">Ja</span>
+                                        <span class="text-sm">Java</span>
+                                    </div>
+                                    <div class="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="w-5 h-5 shrink-0 flex items-center justify-center text-[11px] font-bold leading-none rounded" style="color: #00599C">C++</span>
+                                        <span class="text-sm">C++</span>
+                                    </div>
+                                    <div class="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="w-5 h-5 shrink-0 flex items-center justify-center text-[11px] font-bold leading-none rounded" style="color: #3776AB">Py</span>
+                                        <span class="text-sm">Python</span>
+                                    </div>
+                                    <div class="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="w-5 h-5 shrink-0 flex items-center justify-center text-[11px] font-bold leading-none rounded" style="color: #512BD4">C#</span>
+                                        <span class="text-sm">C#</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">
+                                    Web Development
+                                </h4>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                    <div class="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="w-5 h-5 shrink-0 flex items-center justify-center text-[11px] font-bold leading-none rounded" style="color: #E34F26">HTML</span>
+                                        <span class="text-sm">HTML</span>
+                                    </div>
+                                    <div class="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="w-5 h-5 shrink-0 flex items-center justify-center text-[11px] font-bold leading-none rounded" style="color: #F7DF1E">JS</span>
+                                        <span class="text-sm">JavaScript</span>
+                                    </div>
+                                    <div class="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="w-5 h-5 shrink-0 flex items-center justify-center text-[11px] font-bold leading-none rounded" style="color: #777BB4">PHP</span>
+                                        <span class="text-sm">PHP</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">
+                                    Databases &amp; Tools
+                                </h4>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                    <div class="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="w-5 h-5 shrink-0 flex items-center justify-center text-[11px] font-bold leading-none rounded" style="color: #4479A1">My</span>
+                                        <span class="text-sm">MySQL</span>
+                                    </div>
+                                    <div class="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="w-5 h-5 shrink-0 flex items-center justify-center text-[11px] font-bold leading-none rounded" style="color: #FB7A24">XA</span>
+                                        <span class="text-sm">XAMPP</span>
+                                    </div>
+                                    <div class="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="w-5 h-5 shrink-0 flex items-center justify-center text-[11px] font-bold leading-none rounded" style="color: #5C2D91">VS</span>
+                                        <span class="text-sm">Visual Studio</span>
+                                    </div>
+                                    <div class="px-4 py-3 bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center gap-2 border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="w-5 h-5 shrink-0 flex items-center justify-center text-[11px] font-bold leading-none rounded" style="color: #4A5568">Lx</span>
+                                        <span class="text-sm">Linux</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="pb-20 pt-5" id="education">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Education</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mb-8"></div>
+                </div>
+
+                <div class="flex flex-col gap-8">
+                    <div class="reveal bg-gray-100 dark:bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-gray-800" data-direction="up" style="--reveal-delay: 0s">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                            <h3 class="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                                Tertiary Education
+                            </h3>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">Data Center College of the Philippines – Bangued</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">Bachelor of Science in Information Technology (BSIT)</p>
+                        <ul class="flex flex-wrap gap-x-6 gap-y-1 text-gray-600 dark:text-gray-400">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Current Level: 4th Year</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Current Year: 2026</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Expected Graduation: 2027</li>
+                        </ul>
+                    </div>
+                    <div class="reveal bg-gray-100 dark:bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-gray-800" data-direction="up" style="--reveal-delay: 0.1s">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                            <h3 class="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                                Secondary Education
+                            </h3>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">Manabo National High School</h4>
+                        <ul class="flex flex-wrap gap-x-6 gap-y-1 text-gray-600 dark:text-gray-400">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Attended: 2022</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Graduated: 2023</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section class="py-20" id="projects">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">My Projects</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mb-8"></div>
+                    <p class="text-gray-500 dark:text-gray-400 max-w-3xl mb-12">
+                        Here are some of my recent projects. Each one was built to solve a specific problem or explore new technologies.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="reveal bg-gray-100 dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 transition-colors" data-direction="up" style="--reveal-delay: 0s; --reveal-duration: 0.75s">
+                        <div class="relative overflow-hidden" data-carousel>
+                            <div class="overflow-hidden">
+                                <div class="flex transition-transform duration-500 ease-out" data-carousel-track>
+                                    <img src="/images/Sarak0.png" alt="SARAK: A Geographic Information System for Business Infrastructure in Bangued, Abra" class="w-full aspect-video object-cover shrink-0 select-none" loading="lazy" draggable="false">
+                                    <img src="/images/Sarak1.png" alt="SARAK: A Geographic Information System for Business Infrastructure in Bangued, Abra" class="w-full aspect-video object-cover shrink-0 select-none" loading="lazy" draggable="false">
+                                    <img src="/images/Sarak2.png" alt="SARAK: A Geographic Information System for Business Infrastructure in Bangued, Abra" class="w-full aspect-video object-cover shrink-0 select-none" loading="lazy" draggable="false">
+                                    <img src="/images/Sarak3.png" alt="SARAK: A Geographic Information System for Business Infrastructure in Bangued, Abra" class="w-full aspect-video object-cover shrink-0 select-none" loading="lazy" draggable="false">
+                                    <img src="/images/Sarak4.png" alt="SARAK: A Geographic Information System for Business Infrastructure in Bangued, Abra" class="w-full aspect-video object-cover shrink-0 select-none" loading="lazy" draggable="false">
+                                </div>
+                            </div>
+                            <button type="button" data-carousel-prev class="absolute left-3 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors" aria-label="Previous image">
+                                <svg class="w-5 h-5" aria-hidden="true"><use href="#icon-chevron-left"></use></svg>
+                            </button>
+                            <button type="button" data-carousel-next class="absolute right-3 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors" aria-label="Next image">
+                                <svg class="w-5 h-5" aria-hidden="true"><use href="#icon-chevron-right"></use></svg>
+                            </button>
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                                <button type="button" data-carousel-dot class="carousel-dot h-2 w-2 rounded-full bg-white/60" aria-label="Go to image 1"></button>
+                                <button type="button" data-carousel-dot class="carousel-dot h-2 w-2 rounded-full bg-white/60" aria-label="Go to image 2"></button>
+                                <button type="button" data-carousel-dot class="carousel-dot h-2 w-2 rounded-full bg-white/60" aria-label="Go to image 3"></button>
+                                <button type="button" data-carousel-dot class="carousel-dot h-2 w-2 rounded-full bg-white/60" aria-label="Go to image 4"></button>
+                                <button type="button" data-carousel-dot class="carousel-dot h-2 w-2 rounded-full bg-white/60" aria-label="Go to image 5"></button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">SARAK: A Geographic Information System for Business Infrastructure in Bangued, Abra</h3>
+                                <div class="flex gap-3">
+                                    <a href="https://sarak.free.nf" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="Live Demo">
+                                        <svg class="w-5 h-5" aria-hidden="true"><use href="#icon-external"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Sarak is a website with a map of important places in Bangued, Abra, like hospitals, pharmacies, coffee shops, fast-food chains, and groceries. Right now, the town's planning office only has a yearly spreadsheet of businesses, with no map locations or opening hours, and nobody to check what changes during the year. So people who ask for a place get directions from staff memory, which is often outdated, and they end up at places that are closed or moved. Sarak fixes this by letting residents and business owners add places, report changes, and upload photos. Planning office staff review every submission before it goes live, so the map stays accurate and trustworthy. Anyone can then use the map to search for places and get directions.</p>
+                            <p class="text-blue-600 dark:text-blue-400 text-sm mb-4 font-medium">Ongoing / Academic Project</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">HTML</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">CSS</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">JavaScript</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">PHP</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">MySQL</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">Laravel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="reveal bg-gray-100 dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 transition-colors" data-direction="up" style="--reveal-delay: 0.2s; --reveal-duration: 0.75s">
+                        <div class="relative overflow-hidden" data-carousel>
+                            <div class="overflow-hidden">
+                                <div class="flex transition-transform duration-500 ease-out" data-carousel-track>
+                                    <img src="/images/casanostra0.png" alt="Casa Nostra Resort and Event Information System with Reservation System" class="w-full aspect-video object-cover shrink-0 select-none" loading="lazy" draggable="false">
+                                    <img src="/images/casanostra1.png" alt="Casa Nostra Resort and Event Information System with Reservation System" class="w-full aspect-video object-cover shrink-0 select-none" loading="lazy" draggable="false">
+                                    <img src="/images/casanostra2.png" alt="Casa Nostra Resort and Event Information System with Reservation System" class="w-full aspect-video object-cover shrink-0 select-none" loading="lazy" draggable="false">
+                                </div>
+                            </div>
+                            <button type="button" data-carousel-prev class="absolute left-3 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors" aria-label="Previous image">
+                                <svg class="w-5 h-5" aria-hidden="true"><use href="#icon-chevron-left"></use></svg>
+                            </button>
+                            <button type="button" data-carousel-next class="absolute right-3 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors" aria-label="Next image">
+                                <svg class="w-5 h-5" aria-hidden="true"><use href="#icon-chevron-right"></use></svg>
+                            </button>
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                                <button type="button" data-carousel-dot class="carousel-dot h-2 w-2 rounded-full bg-white/60" aria-label="Go to image 1"></button>
+                                <button type="button" data-carousel-dot class="carousel-dot h-2 w-2 rounded-full bg-white/60" aria-label="Go to image 2"></button>
+                                <button type="button" data-carousel-dot class="carousel-dot h-2 w-2 rounded-full bg-white/60" aria-label="Go to image 3"></button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Casa Nostra Resort and Event Information System with Reservation System</h3>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">A resort and event information system with an online reservation feature designed to make the booking process easier, faster, and more organized. The system allows guests to view resort information, check room availability, submit reservations, and view booking details.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">HTML</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">CSS</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">JavaScript</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">PHP</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="reveal bg-gray-100 dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 transition-colors" data-direction="up" style="--reveal-delay: 0.4s; --reveal-duration: 0.75s">
+                        <div class="relative overflow-hidden" data-carousel>
+                            <div class="overflow-hidden">
+                                <div class="flex transition-transform duration-500 ease-out" data-carousel-track>
+                                    <img src="/images/bayugodental0.png" alt="Bayugo Dental Clinic Online Record Management System" class="w-full aspect-video object-cover shrink-0 select-none" loading="lazy" draggable="false">
+                                    <img src="/images/bayugodental1.png" alt="Bayugo Dental Clinic Online Record Management System" class="w-full aspect-video object-cover shrink-0 select-none" loading="lazy" draggable="false">
+                                    <img src="/images/bayugodental2.png" alt="Bayugo Dental Clinic Online Record Management System" class="w-full aspect-video object-cover shrink-0 select-none" loading="lazy" draggable="false">
+                                </div>
+                            </div>
+                            <button type="button" data-carousel-prev class="absolute left-3 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors" aria-label="Previous image">
+                                <svg class="w-5 h-5" aria-hidden="true"><use href="#icon-chevron-left"></use></svg>
+                            </button>
+                            <button type="button" data-carousel-next class="absolute right-3 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors" aria-label="Next image">
+                                <svg class="w-5 h-5" aria-hidden="true"><use href="#icon-chevron-right"></use></svg>
+                            </button>
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                                <button type="button" data-carousel-dot class="carousel-dot h-2 w-2 rounded-full bg-white/60" aria-label="Go to image 1"></button>
+                                <button type="button" data-carousel-dot class="carousel-dot h-2 w-2 rounded-full bg-white/60" aria-label="Go to image 2"></button>
+                                <button type="button" data-carousel-dot class="carousel-dot h-2 w-2 rounded-full bg-white/60" aria-label="Go to image 3"></button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Bayugo Dental Clinic Online Record Management System</h3>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">An online dental clinic management system designed to help organize patient information, appointments, and dental clinic records. The system aims to reduce manual work and make patient information easier for authorized clinic personnel to manage and access.</p>
+                            <p class="text-blue-600 dark:text-blue-400 text-sm mb-4 font-medium">Academic Project / Ongoing</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">HTML</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">CSS</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">JavaScript</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">PHP</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">MySQL</span>
+                                <span class="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">Laravel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA / Contact -->
+            <section class="py-20" id="contact">
+                <div class="reveal bg-gradient-to-r from-purple-900/80 to-blue-900/80 rounded-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-800" data-direction="up" style="--reveal-delay: 0.1s">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Let's Work Together!</h2>
+                        <div class="mb-8">
+                            <p class="text-gray-100 mb-4">
+                                Prefer to talk it over? Feel free to call or text me anytime — I'd be
+                                happy to answer your questions and help you get started!
+                            </p>
+                            <a href="tel:+639065657910" class="inline-flex items-center gap-3 text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+                                <svg class="w-7 h-7" aria-hidden="true"><use href="#icon-phone"></use></svg>
+                                0906 565 7910
+                            </a>
+                        </div>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <a href="https://www.facebook.com/johnpatrick.blanco.33/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white hover:opacity-90 transition-opacity font-medium inline-flex items-center gap-2">
+                                <svg class="w-5 h-5" aria-hidden="true"><use href="#icon-facebook"></use></svg>
+                                Message Me
+                            </a>
+                            <button type="button" data-scroll="projects" class="px-8 py-4 rounded-full border border-gray-300 text-white hover:bg-gray-800/40 transition-colors font-medium">
+                                View My Work
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="border-t border-gray-200 dark:border-gray-800 py-12">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                        <div class="text-center md:text-left">
+                            <button type="button" data-scroll="home" class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+                                John Patrick
+                            </button>
+                            <p class="text-gray-500 dark:text-gray-400 mt-2">
+                                Building digital experiences that matter
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col items-center md:items-end gap-4">
+                            <div class="flex gap-6">
+                                <a href="https://github.com/johnpatrickblanco" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="GitHub">
+                                    <svg class="w-5 h-5" aria-hidden="true"><use href="#icon-github"></use></svg>
+                                </a>
+                                <a href="tel:+639065657910" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="Phone">
+                                    <svg class="w-5 h-5" aria-hidden="true"><use href="#icon-phone"></use></svg>
+                                </a>
+                                <a href="https://www.facebook.com/johnpatrick.blanco.33/" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="Facebook">
+                                    <svg class="w-5 h-5" aria-hidden="true"><use href="#icon-facebook"></use></svg>
+                                </a>
+                            </div>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">
+                                © <span id="year">2026</span> John Patrick P. Blanco. All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+</body>
+</html>
